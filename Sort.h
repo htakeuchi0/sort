@@ -4,38 +4,38 @@
 #include "IExecute.h"
 #include <random>
 
-// �\�[�g�̂��߂̒��ۃN���X
+// ソートのための抽象クラス
 class Sort : public IExecute {
 public:
-	// �R���X�g���N�^(��������)
+	// コンストラクタ(乱数生成)
 	Sort(size_t size);
 
-	// �R���X�g���N�^(�z��w��)
+	// コンストラクタ(配列指定)
 	Sort(int *arr, size_t size);
 
-	// �f�X�g���N�^
+	// デストラクタ
 	virtual ~Sort();
 
-	// �\�[�g�̎��s
+	// ソートの実行
 	virtual bool Execute() = 0;
 
-	// ���Z�b�g
+	// リセット
 	virtual bool Initialize();
 
-	// �A�N�Z�T(getter�̂�)
+	// アクセサ(getterのみ)
 	virtual size_t Size() const;
 	virtual void Array(int *arr) const;
 
-	// �z��̕\��
+	// 配列の表示
 	virtual void Show() const;
 
-	// ���s���x�𑪂�ꍇ�A�A�N�Z�T�Ăяo���̃I�[�o�[�w�b�h����̂���
-	// �f�[�^�����o�̉�����protected�Ƃ��A�A�N�Z�T�o�R�łȂ����ڃA�N�Z�X����
+	// 実行速度を測る場合、アクセサ呼び出しのオーバーヘッド回避のため
+	// データメンバの可視性をprotectedとし、アクセサ経由でなく直接アクセスする
 protected:
 	size_t size_;
 	int *array_;	
 
-	// ���̃N���X�ł����g��Ȃ����߁Aprivate�ɂ���
+	// このクラスでしか使わないため、privateにする
 private:
 	int *org_array_;
 };

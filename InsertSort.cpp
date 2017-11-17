@@ -8,17 +8,17 @@ InsertSort::InsertSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
-// ’Pƒ‘}“ü–@‚ÌÀs
+// å˜ç´”æŒ¿å…¥æ³•ã®å®Ÿè¡Œ
 bool InsertSort::Execute() {
-	for (size_t i = 0; i < size_; i++) {		// ‰º‹LQÆ 
-		for (size_t j = i - 1; j >= 0; j--) {	// ƒ\[ƒgÏ‚İ‚Ì•”•ª‚ğŒã‚ë‚©‚ç‘–¸
-			// array_[i]‚ğƒ\[ƒgÏ‚İ•”•ªarray_[0..i-1]‚Ì“KØ‚ÈêŠ‚É‘}“ü
-			if (array_[i] < array_[j]) {			// Œ©‚Â‚¯‚½
-				int tmp = array_[i];			// ‘}“ü‚Ì‚½‚ß‚Éˆê•Û‘¶
+	for (size_t i = 0; i < size_; i++) {		// ä¸‹è¨˜å‚ç…§ 
+		for (size_t j = i - 1; j >= 0; j--) {	// ã‚½ãƒ¼ãƒˆæ¸ˆã¿ã®éƒ¨åˆ†ã‚’å¾Œã‚ã‹ã‚‰èµ°æŸ»
+			// array_[i]ã‚’ã‚½ãƒ¼ãƒˆæ¸ˆã¿éƒ¨åˆ†array_[0..i-1]ã®é©åˆ‡ãªå ´æ‰€ã«æŒ¿å…¥
+			if (array_[i] < array_[j]) {			// è¦‹ã¤ã‘ãŸ
+				int tmp = array_[i];			// æŒ¿å…¥ã®ãŸã‚ã«ä¸€æ™‚ä¿å­˜
 				for (size_t k = i; k > j; k--) {
-					array_[k] = array_[k - 1];	// ‚¸‚ç‚·
+					array_[k] = array_[k - 1];	// ãšã‚‰ã™
 				}
-				array_[j] = tmp;					// ‘}“ü
+				array_[j] = tmp;					// æŒ¿å…¥
 				break;
 			}
 		}

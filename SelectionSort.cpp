@@ -8,18 +8,18 @@ SelectionSort::SelectionSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
-// ’Pƒ‘I‘ğ–@‚ÌÀ‘•
+// å˜ç´”é¸æŠæ³•ã®å®Ÿè£…
 bool SelectionSort::Execute() {
-	for (size_t i = 0; i < size_; i++) {		// ‚Ç‚±‚©‚ç’²‚×‚é‚©
-		int min = array_[i];					// array[i..length-1]‚Å‚Ìb’èÅ¬’l
-		size_t minIdx = i;						// b’èÅ¬’l‚Ì“Y‚¦š
+	for (size_t i = 0; i < size_; i++) {		// ã©ã“ã‹ã‚‰èª¿ã¹ã‚‹ã‹
+		int min = array_[i];					// array[i..length-1]ã§ã®æš«å®šæœ€å°å€¤
+		size_t minIdx = i;						// æš«å®šæœ€å°å€¤ã®æ·»ãˆå­—
 		
-		// array[i..length-1]‚É‚¨‚¯‚éÅ¬’l‚ğ’²‚×‚é
+		// array[i..length-1]ã«ãŠã‘ã‚‹æœ€å°å€¤ã‚’èª¿ã¹ã‚‹
 		for (size_t j = i + 1; j < size_; j++) {	
-			if (array_[minIdx = j] < min) min = array_[j];	// Å¬’l‚Ì“Y‚¦š‚à•Û‘¶
+			if (array_[minIdx = j] < min) min = array_[j];	// æœ€å°å€¤ã®æ·»ãˆå­—ã‚‚ä¿å­˜
 		}
 
-		// Å¬’l‚Æarray[i]‚ğŒğŠ·
+		// æœ€å°å€¤ã¨array[i]ã‚’äº¤æ›
 		int tmp = array_[i];				
 		array_[i] = array_[minIdx];
 		array_[minIdx] = tmp;

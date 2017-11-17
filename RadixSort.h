@@ -5,13 +5,13 @@
 #include<cmath>
 #include "Sort.h"
 
-// Šî”ƒ\[ƒgBƒ\[ƒg‚Ì«Ž¿ãA•„†‚È‚µ®”‚¾‚¯ŽÀ‘•
+// åŸºæ•°ã‚½ãƒ¼ãƒˆã€‚ã‚½ãƒ¼ãƒˆã®æ€§è³ªä¸Šã€ç¬¦å·ãªã—æ•´æ•°ã ã‘å®Ÿè£…
 class RadixSort : public Sort {
 public:
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(—”¶¬)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ä¹±æ•°ç”Ÿæˆ)
 	RadixSort(size_t size);
 
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(”z—ñŽw’è)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(é…åˆ—æŒ‡å®š)
 	RadixSort(int *arr, size_t size);
 	bool Execute();
 };

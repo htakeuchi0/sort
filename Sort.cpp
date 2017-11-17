@@ -74,7 +74,7 @@ void Sort::Array(int *arr) const {
 	}
 }
 
-// data‚Ì—v‘f‚ğ•\¦
+// dataã®è¦ç´ ã‚’è¡¨ç¤º
 void Sort::Show() const {
 	for (size_t i = 0; i < size_; i++) {
 		std::cout << array_[i] << ", ";

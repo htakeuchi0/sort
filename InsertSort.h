@@ -3,13 +3,13 @@
 
 #include "Sort.h"
 
-// ’Pƒ‘}“ü–@
+// å˜ç´”æŒ¿å…¥æ³•
 class InsertSort : public Sort {
 public:
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(—”¶¬)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ä¹±æ•°ç”Ÿæˆ)
 	InsertSort(size_t size);
 
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(”z—ñw’è)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(é…åˆ—æŒ‡å®š)
 	InsertSort(int *arr, size_t size);
 	bool Execute();
 };

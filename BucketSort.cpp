@@ -8,28 +8,28 @@ BucketSort::BucketSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
-// ƒoƒPƒbƒgƒ\[ƒg‚ÌÀs
+// ãƒã‚±ãƒƒãƒˆã‚½ãƒ¼ãƒˆã®å®Ÿè¡Œ
 bool BucketSort::Execute() {
-	// Å‘å’l‚ÌŒˆ’è
+	// æœ€å¤§å€¤ã®æ±ºå®š
 	int max = *array_;
 	for (size_t i = 0; i < size_; i++) {
 		if (array_[i] > max) max = array_[i];
 	}
 
-	// ƒoƒPƒc‚Ì—pˆÓBÅ‘å’l‚ªmax‚È‚çA0‚àŠÜ‚ß‚Ä(max+1)ŒÂ‚Ì—v‘f‚ğ‚à‚Â”z—ñ‚ª•K—vB
+	// ãƒã‚±ãƒ„ã®ç”¨æ„ã€‚æœ€å¤§å€¤ãŒmaxãªã‚‰ã€0ã‚‚å«ã‚ã¦(max+1)å€‹ã®è¦ç´ ã‚’ã‚‚ã¤é…åˆ—ãŒå¿…è¦ã€‚
 	size_t lenBucket = max + 1;
 	unsigned int *bucket = new unsigned int[lenBucket];
 	for (size_t i = 0; i < lenBucket; i++) {
-		bucket[i] = EMPTY;			// ‚·‚×‚ÄEMPTY‚Å‰Šú‰»
+		bucket[i] = EMPTY;			// ã™ã¹ã¦EMPTYã§åˆæœŸåŒ–
 	}
 
-	// ƒoƒPƒc‚É“Š‚°‚Ş
+	// ãƒã‚±ãƒ„ã«æŠ•ã’è¾¼ã‚€
 	for (size_t i = 0; i < size_; i++) {
 		unsigned int value = array_[i];
 
-		// ’l‚ªÕ“Ë‚µ‚Ä‚¢‚éê‡‚ÍƒGƒ‰[‚ğ•Ô‚·
+		// å€¤ãŒè¡çªã—ã¦ã„ã‚‹å ´åˆã¯ã‚¨ãƒ©ãƒ¼ã‚’è¿”ã™
 		if (value == EMPTY) {
-			std::cerr << "’l‚ªd•¡‚µ‚Ä‚¢‚Ü‚·Bˆ—‚ğI—¹‚µ‚Ü‚·B" << std::endl;
+			std::cerr << "å€¤ãŒé‡è¤‡ã—ã¦ã„ã¾ã™ã€‚å‡¦ç†ã‚’çµ‚äº†ã—ã¾ã™ã€‚" << std::endl;
 			delete[] bucket;
 			return false;
 		}
@@ -37,7 +37,7 @@ bool BucketSort::Execute() {
 		bucket[value] = value;
 	}
 
-	// ƒoƒPƒc‚©‚çæ‚èo‚·
+	// ãƒã‚±ãƒ„ã‹ã‚‰å–ã‚Šå‡ºã™
 	int idx = 0;
 	for (size_t i = 0; i < lenBucket; i++) {
 		if(bucket[i] != EMPTY) {

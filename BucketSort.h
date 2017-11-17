@@ -4,17 +4,17 @@
 #include "Sort.h"
 #include <iostream>
 
-// ƒoƒPƒbƒgƒ\[ƒg
+// ãƒã‚±ãƒƒãƒˆã‚½ãƒ¼ãƒˆ
 class BucketSort : public Sort {
 public:
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(—”¶¬)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ä¹±æ•°ç”Ÿæˆ)
 	BucketSort(size_t size);
 
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(”z—ñw’è)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(é…åˆ—æŒ‡å®š)
 	BucketSort(int *arr, size_t size);
 	bool Execute();
 
 private:
-	static const unsigned int EMPTY = static_cast<unsigned int>(-1);	// EMPTY’l
+	static const unsigned int EMPTY = static_cast<unsigned int>(-1);	// EMPTYå€¤
 };
 #endif // #ifndef BUCKETSORT_H_20160508_2007_

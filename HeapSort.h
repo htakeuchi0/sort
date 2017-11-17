@@ -3,19 +3,19 @@
 
 #include "Sort.h"
 
-// ƒq[ƒvƒ\[ƒg
+// ãƒ’ãƒ¼ãƒ—ã‚½ãƒ¼ãƒˆ
 class HeapSort : public Sort {
 public:
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(—”¶¬)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ä¹±æ•°ç”Ÿæˆ)
 	HeapSort(size_t size);
 
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(”z—ñw’è)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(é…åˆ—æŒ‡å®š)
 	HeapSort(int *arr, size_t size);
 
 	bool Execute();
 	virtual void Array(int *arr) const;
 
-	// ”z—ñ‚Ì•\¦
+	// é…åˆ—ã®è¡¨ç¤º
 	virtual void Show() const;
 
 private:

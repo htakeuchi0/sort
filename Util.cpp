@@ -21,7 +21,7 @@ long long Util::GetTime(IExecute *obj, int times){
 	auto dur = end - start;
 
 	if (!succeeded) {
-		std::cerr << "ŽÀs’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½" << std::endl;
+		std::cerr << "å®Ÿè¡Œä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ" << std::endl;
 	}
 
 	auto msec = std::chrono::duration_cast<std::chrono::milliseconds>(dur).count() / times;

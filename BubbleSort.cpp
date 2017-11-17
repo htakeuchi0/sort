@@ -8,11 +8,11 @@ BubbleSort::BubbleSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
-// ƒoƒuƒ‹ƒ\[ƒg‚ÌÀs
+// ãƒãƒ–ãƒ«ã‚½ãƒ¼ãƒˆã®å®Ÿè¡Œ
 bool BubbleSort::Execute() {
-	for (size_t i = size_ - 1; i >= 1; i--) {		  // ‰º‹LQÆ
-		for (size_t j = 0; j < i; j++) {			  // array_[0..i]‚Ì”ÍˆÍ‚ÅŒğŠ·
-			if (array_[j] > array_[j + 1]) {		  // —×“¯m‚ğ”äŠr‚µ‚ÄA‰E‚Ì‚Ù‚¤‚ª¬‚³‚¯‚ê‚ÎƒuƒNƒuƒNŒğŠ·
+	for (size_t i = size_ - 1; i >= 1; i--) {		  // ä¸‹è¨˜å‚ç…§
+		for (size_t j = 0; j < i; j++) {			  // array_[0..i]ã®ç¯„å›²ã§äº¤æ›
+			if (array_[j] > array_[j + 1]) {		  // éš£åŒå£«ã‚’æ¯”è¼ƒã—ã¦ã€å³ã®ã»ã†ãŒå°ã•ã‘ã‚Œã°ãƒ–ã‚¯ãƒ–ã‚¯äº¤æ›
 				int tmp = array_[j];
 				array_[j] = array_[j + 1];
 				array_[j + 1] = tmp;

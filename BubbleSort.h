@@ -3,13 +3,13 @@
 
 #include "Sort.h"
 
-// ƒoƒuƒ‹ƒ\[ƒg
+// ãƒãƒ–ãƒ«ã‚½ãƒ¼ãƒˆ
 class BubbleSort : public Sort {
 public:
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(—”¶¬)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ä¹±æ•°ç”Ÿæˆ)
 	BubbleSort(size_t size);
 
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^(”z—ñw’è)
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(é…åˆ—æŒ‡å®š)
 	BubbleSort(int *arr, size_t size);
 	bool Execute();
 };

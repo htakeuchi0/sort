@@ -3,12 +3,12 @@
 #include "Main.h"
 
 void SortTest(Sort *sort) {
-	// •À‚Ñ‘Ö‚¦
-	std::cout << "ƒ\[ƒg‚ğŠJn‚µ‚Ü‚·F" << std::endl;
+	// ä¸¦ã³æ›¿ãˆ
+	std::cout << "ã‚½ãƒ¼ãƒˆã‚’é–‹å§‹ã—ã¾ã™ï¼š" << std::endl;
 	sort->Show();
 
-	if (sort->Execute()) {						// ³‚µ‚­•À‚Ñ‘Ö‚¦‚ç‚ê‚½ê‡‚Ì‚İ•\¦
-		std::cout << "\nƒ\[ƒgŒãF" << std::endl;
+	if (sort->Execute()) {						// æ­£ã—ãä¸¦ã³æ›¿ãˆã‚‰ã‚ŒãŸå ´åˆã®ã¿è¡¨ç¤º
+		std::cout << "\nã‚½ãƒ¼ãƒˆå¾Œï¼š" << std::endl;
 		sort->Show();
 	}
 }

@@ -8,21 +8,21 @@ QuickSort::QuickSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
-// �N�C�b�N�\�[�g�̎��s�B�e���v���[�g����REC�̒l�ɂ���čċA���肩�Ȃ����I�ׂ�B
+// クイックソートの実行。テンプレート引数RECの値によって再帰ありかなしか選べる。
 bool QuickSort::Execute() {
 	QuickRecursiveOn(array_, 0, static_cast<int>(size_) - 1);
 	return true;
 }
 
-// �ċA����N�C�b�N�\�[�g
+// 再帰ありクイックソート
 void QuickSort::QuickRecursiveOn(int *array, int left, int right) {
-	if (left >= right) return;		// �v�f���Ȃ���ΏI��
+	if (left >= right) return;		// 要素がなければ終了
 
-	int pivot;						// pivot�̗p��
-	int mid = (left + right) >> 1;	// left��right�̒���
+	int pivot;						// pivotの用意
+	int mid = (left + right) >> 1;	// leftとrightの中間
 
-	// left, mid, right�̒��Ԓl��pivot�Ƃ���
-	// �ň��v�Z��O(n^2)��U������󋵂�������邽�߂̍H�v
+	// left, mid, rightの中間値をpivotとする
+	// 最悪計算量O(n^2)を誘発する状況を回避するための工夫
 	if(array[left] <= array[mid]) {
 		if(array[mid] <= array[right]) pivot = array[mid];
 		else {	// start <= mid && end < mid
@@ -37,26 +37,26 @@ void QuickSort::QuickRecursiveOn(int *array, int left, int right) {
 		}
 	}
 
-	// �z����ɕ���
-	int i = left - 1, j = right + 1;	// ++i, --j�Ə������߂ɃX�^�[�g�����炵�Ă���
-	while(i < j) {						// �O�̂��߁B���Ԃ�while(true)�ł�OK
-		while (array[++i] < pivot)		// ������pivot��菬�����Ȃ���Ȃ��̂ŃX���[
-			;							// �����łȂ��Ƃ��X�g�b�v
+	// 配列を二つに分割
+	int i = left - 1, j = right + 1;	// ++i, --jと書くためにスタートをずらしておく
+	while(i < j) {						// 念のため。たぶんwhile(true)でもOK
+		while (array[++i] < pivot)		// 左側でpivotより小さいなら問題ないのでスルー
+			;							// そうでないときストップ
 
-		while (array[--j] > pivot)		// �E����pivot���傫���Ȃ���Ȃ��̂ŃX���[
-			;							// �����łȂ��Ƃ��X�g�b�v
+		while (array[--j] > pivot)		// 右側でpivotより大きいなら問題ないのでスルー
+			;							// そうでないときストップ
 
-		if (i >= j) break;				// �o������E�ʂ�߂����番������
+		if (i >= j) break;				// 出会った・通り過ぎたら分割完了
 
-		// �C���M�����[�B�����ւ��āA���ɏ������l�A�E�ɑ傫���l���W�܂�悤�ɂ���B
+		// イレギュラー達を入れ替えて、左に小さい値、右に大きい値が集まるようにする。
 		int tmp = array[i];
 		array[i] = array[j];
 		array[j] = tmp;
 	}
 
-	// �ċA�����B(����)�O���L���̈� O(log n) �͂��̍ċA�̏���
-	// �ʂ�߂��΍�ōs���߂���i, j�������߂�
-	// i == j�Ȃ�΂��傤��pivot�ŏo����Ă��邽��pivot�������ē񕪂ł���
+	// 再帰処理。(平均)外部記憶領域 O(log n) はこの再帰の所為
+	// 通り過ぎ対策で行き過ぎたi, jを引き戻す
+	// i == jならばちょうどpivotで出会っているためpivotを除いて二分できる
 	QuickRecursiveOn(array, left, --i);	
 	QuickRecursiveOn(array, ++j , right);	
 }
