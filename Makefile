@@ -1,6 +1,6 @@
 TARGET = Main
 
-CXXFLAGS = -std=c++11
+CXXFLAGS = -Wall -std=c++11
 
 SRCS = $(shell ls *.cpp)
 OBJS = $(SRCS:.cpp=.o)
@@ -14,6 +14,6 @@ all: $(TARGET)
 run: all
 	./$(TARGET)
 
-clearn:
+clean:
 	rm -f $(OBJS) $(TARGET)
 
