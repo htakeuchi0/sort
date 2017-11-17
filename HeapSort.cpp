@@ -36,6 +36,7 @@ void HeapSort::SlideArray() {
 		array_[i + 1] = arr[i];
 	}
 
+	delete[] arr;
 }
 
 void HeapSort::Show() const {
