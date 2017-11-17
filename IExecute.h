@@ -3,7 +3,7 @@
 
 class IExecute {
 public:
-	virtual bool Reset() = 0;
+	virtual bool Initialize() = 0;
 	virtual bool Execute() = 0;
 };
 

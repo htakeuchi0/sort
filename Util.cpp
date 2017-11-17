@@ -14,7 +14,7 @@ long long Util::GetTime(IExecute *obj, int times){
 	auto start = std::chrono::system_clock::now();
 	bool succeeded = false;
 	for (int i = 0; i < times; i++) {
-		obj->Reset();
+		obj->Initialize();
 		succeeded |= obj->Execute();
 	}
 	auto end = std::chrono::system_clock::now();

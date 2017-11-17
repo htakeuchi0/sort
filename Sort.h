@@ -20,7 +20,7 @@ public:
 	virtual bool Execute() = 0;
 
 	// リセット
-	virtual bool Reset();
+	virtual bool Initialize();
 
 	// アクセサ(getterのみ)
 	virtual size_t Size() const;

@@ -44,14 +44,18 @@ Sort::~Sort() {
 	org_array_ = nullptr;
 }
 
-bool Sort::Reset() {
+bool Sort::Initialize() {
 	if (array_ == nullptr || org_array_ == nullptr) {
-		return false;
+		std::random_device rand_device;
+		for (int i = 0; i < size_; i++) {
+			array_[i] = rand_device() % (size_ * 2);
+			org_array_[i] = array_[i];
+		}
 	}
-
-	std::random_device rand_device;
-	for (int i = 0; i < size_; i++) {
-		array_[i] = org_array_[i];
+	else {
+		for (int i = 0; i < size_; i++) {
+			array_[i] = org_array_[i];
+		}
 	}
 	return true;
 }
