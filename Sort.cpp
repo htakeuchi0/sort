@@ -15,7 +15,7 @@ Sort::Sort(size_t size):
 	}
 
 	std::random_device rand_device;
-	for (int i = 0; i < size_; i++) {
+	for (size_t i = 0; i < size_; i++) {
 		array_[i] = rand_device() % (size_ * 2);
 		org_array_[i] = array_[i];
 	}
@@ -30,7 +30,7 @@ Sort::Sort(int *arr, size_t size):
 		return;
 	}
 
-	for (int i = 0; i < size_; i++) {
+	for (size_t i = 0; i < size_; i++) {
 		array_[i] = arr[i];
 		org_array_[i] = array_[i];
 	}
@@ -47,13 +47,13 @@ Sort::~Sort() {
 bool Sort::Initialize() {
 	if (array_ == nullptr || org_array_ == nullptr) {
 		std::random_device rand_device;
-		for (int i = 0; i < size_; i++) {
+		for (size_t i = 0; i < size_; i++) {
 			array_[i] = rand_device() % (size_ * 2);
 			org_array_[i] = array_[i];
 		}
 	}
 	else {
-		for (int i = 0; i < size_; i++) {
+		for (size_t i = 0; i < size_; i++) {
 			array_[i] = org_array_[i];
 		}
 	}
@@ -69,7 +69,7 @@ void Sort::Array(int *arr) const {
 		return;
 	}
 
-	for (int i = 0; i < size_; i++) {
+	for (size_t i = 0; i < size_; i++) {
 		arr[i] = array_[i];
 	}
 }

@@ -18,7 +18,7 @@ void HeapSort::Array(int *arr) const {
 		return;
 	}
 
-	for (int i = 0; i < size_; i++) {
+	for (size_t i = 0; i < size_; i++) {
 		arr[i] = array_[i + 1];
 	}
 }
