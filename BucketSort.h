@@ -9,6 +9,7 @@ class BucketSort : public Sort {
 public:
 	// コンストラクタ(乱数生成)
 	BucketSort(size_t size);
+	BucketSort(size_t size, ArrayType type);
 
 	// コンストラクタ(配列指定)
 	BucketSort(int *arr, size_t size);

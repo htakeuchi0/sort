@@ -4,6 +4,10 @@ BucketSort::BucketSort(size_t size):
 	Sort(size) {
 }
 
+BucketSort::BucketSort(size_t size, ArrayType type):
+	Sort(size, type) {
+}
+
 BucketSort::BucketSort(int *arr, size_t size):
 	Sort(arr, size) {
 }

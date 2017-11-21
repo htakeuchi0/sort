@@ -10,6 +10,7 @@ class RadixSort : public Sort {
 public:
 	// コンストラクタ(乱数生成)
 	RadixSort(size_t size);
+	RadixSort(size_t size, ArrayType type);
 
 	// コンストラクタ(配列指定)
 	RadixSort(int *arr, size_t size);

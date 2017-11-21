@@ -8,6 +8,7 @@
 #include "QuickSort.h"
 #include "RadixSort.h"
 #include "SelectionSort.h"
+#include "HeapSort.h"
 #include "Util.h"
 
 void SortTest(Sort *sort);

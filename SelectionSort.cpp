@@ -16,7 +16,7 @@ bool SelectionSort::Execute() {
 		
 		// array[i..length-1]における最小値を調べる
 		for (size_t j = i + 1; j < size_; j++) {	
-			if (array_[minIdx = j] < min) min = array_[j];	// 最小値の添え字も保存
+			if (array_[j] < min) min = array_[minIdx = j];	// 最小値の添え字も保存
 		}
 
 		// 最小値とarray[i]を交換
