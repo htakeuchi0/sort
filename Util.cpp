@@ -48,6 +48,7 @@ bool Util::Ordered(Sort *sort) {
 	for (size_t i = 1; i < size; i++){
 		ordered &= arr[i - 1] <= arr[i];	
 	}
+	delete[] arr;
 
 	return ordered;
 }
