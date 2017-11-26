@@ -6,11 +6,19 @@
 // 単純挿入法
 class InsertSort : public Sort {
 public:
-	// コンストラクタ(乱数生成)
+	// コンストラクタ
+	// サイズを指定して乱数配列を生成する
 	InsertSort(size_t size);
 
-	// コンストラクタ(配列指定)
+	// コンストラクタ
+	// 配列サイズとタイプを指定して配列を生成する
+	InsertSort(size_t size, ArrayType type);
+
+	// コンストラクタ
+	// 指定された配列をコピーして配列を生成する
 	InsertSort(int *arr, size_t size);
+
+	// ソートの実行
 	bool Execute();
 };
 

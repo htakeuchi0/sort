@@ -1,4 +1,4 @@
-TARGET = Main
+TARGET = Sample
 
 CXXFLAGS = -Wall -std=c++11
 

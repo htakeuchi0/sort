@@ -7,15 +7,23 @@
 // バケットソート
 class BucketSort : public Sort {
 public:
-	// コンストラクタ(乱数生成)
+	// コンストラクタ
+	// サイズを指定して乱数配列を生成する
 	BucketSort(size_t size);
+
+	// コンストラクタ
+	// 配列サイズとタイプを指定して配列を生成する
 	BucketSort(size_t size, ArrayType type);
 
-	// コンストラクタ(配列指定)
+	// コンストラクタ
+	// 指定された配列をコピーして配列を生成する
 	BucketSort(int *arr, size_t size);
+
+	// バケットソートの実行
 	bool Execute();
 
 private:
-	static const unsigned int EMPTY = static_cast<unsigned int>(-1);	// EMPTY値
+	// 空要素を表す
+	static const unsigned int kEmpty = static_cast<unsigned int>(-1);
 };
 #endif // #ifndef BUCKETSORT_H_20160508_2007_

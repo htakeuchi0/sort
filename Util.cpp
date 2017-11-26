@@ -2,12 +2,14 @@
 #include <chrono>
 #include <iostream>
 
+// 実行時間の計測
 long long Util::GetTime(IExecute *obj, int times){
 	if (times <= 0) {
-		times = 10;
+		times = Util::kDefaultTimes;
 	}
 
 	if(obj == nullptr){
+		std::cerr << "実行できません" << std::endl;
 		return 0L;
 	}
 
@@ -28,17 +30,22 @@ long long Util::GetTime(IExecute *obj, int times){
 	}
 	end = std::chrono::system_clock::now();
 	auto dur = end - start;
+
+	// 初期化にかかった時間を除く
 	dur -= dur_for_init;
 	
+	// 失敗したときエラーを返す
 	if (!succeeded) {
 		std::cerr << "実行中にエラーが発生しました" << std::endl;
 		return 0L;
 	}
 
+	// 1回あたりの実行時間を求める
 	auto msec = std::chrono::duration_cast<std::chrono::milliseconds>(dur).count() / times;
 	return msec;
 }
 
+// 配列がソート済みのときtrueを返す
 bool Util::Ordered(Sort *sort) {
 	size_t size = sort->Size();
 	int *arr = new int[size];
@@ -49,6 +56,7 @@ bool Util::Ordered(Sort *sort) {
 		ordered &= arr[i - 1] <= arr[i];	
 	}
 	delete[] arr;
+	arr = nullptr;
 
 	return ordered;
 }

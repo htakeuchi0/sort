@@ -3,17 +3,26 @@
 
 #include "Sort.h"
 
-// クイックソート。
+// クイックソート
 class QuickSort : public Sort {
 public:
-	// コンストラクタ(乱数生成)
+	// コンストラクタ
+	// サイズを指定して乱数配列を生成する
 	QuickSort(size_t size);
 
-	// コンストラクタ(配列指定)
+	// コンストラクタ
+	// 配列サイズとタイプを指定して配列を生成する
+	QuickSort(size_t size, ArrayType type);
+
+	// コンストラクタ
+	// 指定された配列をコピーして配列を生成する
 	QuickSort(int *arr, size_t size);
+
+	// クイックソートの実行
 	bool Execute();
 
 private:
-	void QuickRecursiveOn(int *array, int start, int end);	// 再帰あり
+	// 再帰クイックソート
+	void QuickRecursive(int start, int end);
 };
 #endif //#ifndef QUICKSORT_20160508_2155_

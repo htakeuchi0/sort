@@ -6,12 +6,19 @@
 // 単純選択法
 class SelectionSort : public Sort {
 public:
-	// コンストラクタ(乱数生成)
+	// コンストラクタ
+	// サイズを指定して乱数配列を生成する
 	SelectionSort(size_t size);
 
-	// コンストラクタ(配列指定)
+	// コンストラクタ
+	// 配列サイズとタイプを指定して配列を生成する
+	SelectionSort(size_t size, ArrayType type);
+
+	// コンストラクタ
+	// 指定された配列をコピーして配列を生成する
 	SelectionSort(int *arr, size_t size);
 
+	// 単純選択法の実行
 	bool Execute();
 };
 

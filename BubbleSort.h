@@ -6,11 +6,19 @@
 // バブルソート
 class BubbleSort : public Sort {
 public:
-	// コンストラクタ(乱数生成)
+	// コンストラクタ
+	// サイズを指定して乱数配列を生成する
 	BubbleSort(size_t size);
 
-	// コンストラクタ(配列指定)
+	// コンストラクタ
+	// 配列サイズとタイプを指定して配列を生成する
+	BubbleSort(size_t size, ArrayType type);
+
+	// コンストラクタ
+	// 指定された配列をコピーして配列を生成する
 	BubbleSort(int *arr, size_t size);
+
+	// バブルソートの実行
 	bool Execute();
 };
 #endif // #ifndef BUBBLESORT_H_20160508_2137_
