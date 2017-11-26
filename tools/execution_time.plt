@@ -27,7 +27,7 @@ plot file using 1:2 with linespoints title "Bucket",\
 
 # 指定ファイルに出力
 set output outfile
-set terminal postscript eps color "Times-Roman, 24"
+set terminal postscript eps color "Times-Roman, 16"
 
 # 標準出力
 replot
