@@ -80,7 +80,7 @@ $ gnuplot -e "file='file.csv'; outfile='figure.eps'" tools/execution_time.plt
 ```
 
 また、グラフは次のようになりました。  
-配列サイズが大きくなると、バブルソート、選択ソート、挿入ソートの実行時間が増大することがわかります。  
+配列サイズが大きくなると、バブルソート、選択ソート、挿入ソートの実行時間が増大することがわかります。  
 これらソートの計算量のオーダが<i>O(n<sup>2</sup>)</i>であることも観察できます。  
 
 <img src="/image/figure.png" alter="figure" width=75%/>
