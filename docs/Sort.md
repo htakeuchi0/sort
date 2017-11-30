@@ -32,7 +32,7 @@
 |-|GenerateDistinctArray()|すべての要素が異なる乱数配列を生成します。|
 |-|GeneraeOrderedArray()|すでにソートされている配列を生成します。|
 
-### Sort._Execute_() メソッド
+### Sort::_Execute_() メソッド
 
 ソートを実行する関数です。  
 純粋仮想関数なので、具体的なソートアルゴリズムはSortクラスを継承するクラスに移譲します。
@@ -49,7 +49,7 @@ virtual bool Execute() = 0;
 成功したときだけtrueを返す。
 
 ---
-### Sort.Initialize() メソッド
+### Sort::Initialize() メソッド
 
 配列をソート前の状態に戻して初期化します。  
 配列はコンストラクタで生成されるはずですが、もし配列が空であれば、乱数配列を生成します。
@@ -66,7 +66,7 @@ virtual bool Initialize();
 成功したときだけtrueを返す。
 
 ---
-### Sort.Size() メソッド
+### Sort::Size() メソッド
 
 配列サイズを返します。
 
@@ -82,7 +82,7 @@ virtual size_t Size() const;
 配列のサイズ。
 
 ---
-### Sort.Array(int *arr) メソッド
+### Sort::Array(int *arr) メソッド
 
 配列のコピーを引数に返します。
 
@@ -98,7 +98,7 @@ virtual void Array(int *arr) const;
 なし。
 
 ---
-### Sort.SetSize(size_t size) メソッド
+### Sort::SetSize(size_t size) メソッド
 
 配列サイズを設定します。  
 このとき、与えられたサイズの配列を再生成します。  
@@ -116,7 +116,7 @@ virtual bool SetSize(size_t size);
 成功したときだけtrueを返す。
 
 ---
-### Sort.Show() メソッド
+### Sort::Show() メソッド
 配列を表示します。
 
 #### 構文
