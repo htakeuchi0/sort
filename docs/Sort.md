@@ -48,6 +48,7 @@ virtual bool Execute() = 0;
 #### 戻り値  
 成功したときだけtrueを返す。
 
+---
 ### Sort.Initialize() メソッド
 
 配列をソート前の状態に戻して初期化します。  
@@ -64,6 +65,7 @@ virtual bool Initialize();
 #### 戻り値  
 成功したときだけtrueを返す。
 
+---
 ### Sort.Size() メソッド
 
 配列サイズを返します。
@@ -79,6 +81,7 @@ virtual size_t Size() const;
 #### 戻り値  
 配列のサイズ。
 
+---
 ### Sort.Array(int *arr) メソッド
 
 配列のコピーを引数に返します。
@@ -94,6 +97,7 @@ virtual void Array(int *arr) const;
 #### 戻り値  
 なし。
 
+---
 ### Sort.SetSize(size_t size) メソッド
 
 配列サイズを設定します。  
@@ -111,6 +115,7 @@ virtual bool SetSize(size_t size);
 #### 戻り値  
 成功したときだけtrueを返す。
 
+---
 ### Sort.Show() メソッド
 配列を表示します。
 
@@ -125,10 +130,12 @@ virtual void Show() const;
 #### 戻り値  
 なし。
 
+---
+
 ## データメンバ
-| |名前|説明|
-|---|----|----|
-|#|size_|配列のサイズです。|
-|#|array_|ソートする配列です。|
-|#|org_array_|ソート前の配列です。|
-|#|type_|配列のタイプです。|
+| |名前|型|説明|
+|---|---|----|----|
+|#|size_|size_t|配列のサイズです。|
+|#|array_|int*|ソートする配列です。|
+|#|org_array_|int*|ソート前の配列です。|
+|#|type_|ArrayType|配列のタイプです。|
