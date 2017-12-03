@@ -47,7 +47,7 @@ HeapSort(size_t size, ArrayType type);
 
 ##### type
 配列のタイプ。  
-詳しくは、ArrayType列挙型参照。
+詳しくは、[ArrayType列挙型](./ArrayType.md)参照。
 
 -----
 
