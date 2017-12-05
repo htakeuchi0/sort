@@ -27,6 +27,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	Sort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	Sort(const Sort& sort);
+
 	// デストラクタ
 	virtual ~Sort();
 
@@ -45,6 +48,9 @@ public:
 	// 配列のサイズを設定する
 	// 与えられた大きさの配列を再生成する
 	virtual bool SetSize(size_t size);
+
+	// 配列のタイプを取得する
+	virtual ArrayType Type() const;
 
 	// 配列の表示
 	virtual void Show() const;

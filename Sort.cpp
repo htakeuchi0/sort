@@ -41,7 +41,7 @@ Sort::Sort(int *arr, size_t size):
 	type_(ArrayType::kConstant)
 {
 	array_ = new int[size_];
-	if (org_array_ == nullptr){
+	if (array_ == nullptr){
 		return;
 	}
 
@@ -52,6 +52,29 @@ Sort::Sort(int *arr, size_t size):
 
 	for (size_t i = 0; i < size_; i++) {
 		array_[i] = arr[i];
+		org_array_[i] = array_[i];
+	}
+}
+
+// コピーコンストラクタ
+Sort::Sort(const Sort& sort) {
+	size_ = sort.Size();
+	
+	array_ = new int[size_];
+	if (array_ == nullptr){
+		return;
+	}
+
+	org_array_ = new int[size_];
+	if (org_array_ == nullptr){
+		return;
+	}
+
+	sort.Array(array_);
+
+	type_ = sort.Type();
+	
+	for (size_t i = 0; i < size_; i++) {
 		org_array_[i] = array_[i];
 	}
 }
@@ -88,6 +111,11 @@ bool Sort::Initialize() {
 // 配列のサイズを返す
 size_t Sort::Size() const {
 	return size_;
+}
+
+// 配列のタイプを返す
+ArrayType Sort::Type() const {
+	return type_;
 }
 
 // 配列のサイズを設定する
