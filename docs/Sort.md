@@ -13,6 +13,7 @@
 |+|Sort(size_t size)|配列サイズを指定して、ソートするための乱数配列を生成します。|
 |+|Sort(size_t size, ArrayType type)|配列サイズと配列タイプを指定して、ソートするための配列を生成します。|
 |+|Sort(int *arr, size_t size)|配列とそのサイズを指定して、ソートするための配列のコピーを生成します。|
+|+|Sort(const Sort& sort)|コピーコンストラクタです。|
 
 ### Sort::Sort(size_t size) コンストラクタ
 配列サイズを指定して、ソートするための乱数配列を生成します。  
@@ -63,6 +64,20 @@ Sort(int *arr, size_t size);
 
 -----
 
+### Sort::Sort(const Sort& sort) コンストラクタ
+コピーコンストラクタです。
+
+#### 構文
+```c++
+Sort(const Sort& sort);
+```
+
+#### 引数  
+##### sort
+コピー元のSortクラスのオブジェクト。
+
+-----
+
 ## デストラクタ
 | |名前|説明|
 |---|----|----|
@@ -76,6 +91,7 @@ Sort(int *arr, size_t size);
 |+|Size()|配列のサイズを返します。|
 |+|Array(int *arr)|配列のコピーを返します。|
 |+|SetSize(size_t size)|配列のサイズを設定します。与えられた大きさの配列を再生成します。|
+|+|Type()|配列のタイプを返します。|
 |+|Show()|配列を表示します。|
 |-|GenerateRandomArray()|一様乱数配列を生成します。|
 |-|GenerateDistinctArray()|すべての要素が異なる乱数配列を生成します。|
@@ -163,6 +179,23 @@ virtual bool SetSize(size_t size);
 
 #### 戻り値  
 成功したときだけtrueを返す。
+
+---
+### Sort::Type() メソッド
+
+配列のタイプを返します。
+
+#### 構文
+```c++
+virtual ArrayType Type() const;
+```
+
+#### 引数  
+なし。
+
+#### 戻り値  
+配列のタイプ。  
+詳しくは、[ArrayType列挙型](./ArrayType.md)参照。
 
 ---
 ### Sort::Show() メソッド
