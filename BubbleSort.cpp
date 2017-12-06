@@ -18,6 +18,11 @@ BubbleSort::BubbleSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
+// コピーコンストラクタ
+BubbleSort::BubbleSort(const BubbleSort& bubble_sort):
+	Sort(bubble_sort) {
+}
+
 // バブルソートの実行
 bool BubbleSort::Execute() {
 	for (size_t i = size_ - 1; i >= 1; i--) {

@@ -25,6 +25,11 @@ HeapSort::HeapSort(int *arr, size_t size):
 	SlideArray();
 }
 
+// コピーコンストラクタ
+HeapSort::HeapSort(const HeapSort& heap_sort):
+	Sort(heap_sort) {
+}
+
 // 配列のコピーを返す
 void HeapSort::Array(int *arr) const {
 	if (arr == nullptr || array_ == nullptr) {

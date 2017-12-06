@@ -18,6 +18,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	InsertSort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	InsertSort(const InsertSort& insert_sort);
+
 	// ソートの実行
 	bool Execute();
 };

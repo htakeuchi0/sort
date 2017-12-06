@@ -18,6 +18,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	SelectionSort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	SelectionSort(const SelectionSort& selection_sort);
+
 	// 単純選択法の実行
 	bool Execute();
 };

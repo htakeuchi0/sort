@@ -18,6 +18,11 @@ QuickSort::QuickSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
+// コピーコンストラクタ
+QuickSort::QuickSort(const QuickSort& quick_sort) :
+	Sort(quick_sort) {
+}
+
 // クイックソートの実行
 bool QuickSort::Execute() {
 	QuickRecursive(0, static_cast<int>(size_) - 1);

@@ -18,6 +18,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	BubbleSort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	BubbleSort(const BubbleSort& bubble_sort);
+
 	// バブルソートの実行
 	bool Execute();
 };

@@ -18,6 +18,11 @@ BucketSort::BucketSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
+// コピーコンストラクタ
+BucketSort::BucketSort(const BucketSort& bucket_sort) :
+	Sort(bucket_sort) {
+}
+
 // バケットソートの実行
 bool BucketSort::Execute() {
 	// 最大値の決定

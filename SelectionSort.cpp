@@ -18,6 +18,11 @@ SelectionSort::SelectionSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
+// コピーコンストラクタ
+SelectionSort::SelectionSort(const SelectionSort& selection_sort):
+	Sort(selection_sort) {
+}
+
 // 単純選択法の実行
 bool SelectionSort::Execute() {
 	for (size_t i = 0; i < size_; i++) {		// どこから調べるか

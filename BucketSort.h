@@ -19,6 +19,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	BucketSort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	BucketSort(const BucketSort& bucket_sort);
+
 	// バケットソートの実行
 	bool Execute();
 

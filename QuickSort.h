@@ -18,6 +18,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	QuickSort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	QuickSort(const QuickSort& quick_sort);
+
 	// クイックソートの実行
 	bool Execute();
 

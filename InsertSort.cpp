@@ -19,6 +19,11 @@ InsertSort::InsertSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
+// コピーコンストラクタ
+InsertSort::InsertSort(const InsertSort& insert_sort) :
+	Sort(insert_sort) {
+}
+
 // 単純挿入法の実行
 bool InsertSort::Execute() {
 	for (int i = 1; i < static_cast<int>(size_); i++) {

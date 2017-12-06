@@ -18,6 +18,9 @@ public:
 	// 指定された配列をコピーして配列を生成する
 	HeapSort(int *arr, size_t size);
 
+	// コピーコンストラクタ
+	HeapSort(const HeapSort& heap_sort);
+
 	// ヒープソートの実行
 	bool Execute();
 

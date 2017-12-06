@@ -19,6 +19,11 @@ RadixSort::RadixSort(int *arr, size_t size):
 	Sort(arr, size) {
 }
 
+// コピーコンストラクタ
+RadixSort::RadixSort(const RadixSort& radix_sort):
+	Sort(radix_sort) {
+}
+
 // 基数ソート。16進数で行う。
 // バケットソートと違い、一つのバケツに複数の要素がはいる。
 bool RadixSort::Execute() {

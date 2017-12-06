@@ -19,6 +19,9 @@ public:
 	// コンストラクタ
 	// 指定された配列をコピーして配列を生成する
 	RadixSort(int *arr, size_t size);
+
+	// コピーコンストラクタ
+	RadixSort(const RadixSort& radix_sort);
 	
 	// 基数ソートの実行
 	bool Execute();
